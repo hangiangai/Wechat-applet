@@ -1,0 +1,24 @@
+<text class="number">请输入手机号</text>
+
+
+
+<view class='property'>
+  <view class='region'>
+    <text>国家/地区</text>
+    <text class='china'>中国大陆+86</text>
+  </view>
+
+
+  <view class='phonenumber'>
+    <text>手机号码</text>
+    <input placeholder='请输入手机号' maxlength="11" bindinput='getPhoneValue' value='{{phone}}'></input>
+  </view>
+</view>
+
+<view class='gain'>
+  <text>效验码</text>
+  <input placeholder='请输入效验码' bindinput='getCodeValue' value='{{code}}'></input>
+  <button bindtap='getVerificationCode' disabled='{{disabled}}'>{{codename}}</button>
+</view>
+
+<button class='next' bindtap='verificationcode'>下一步</button>

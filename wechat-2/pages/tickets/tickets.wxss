@@ -1,0 +1,57 @@
+/* pages/tickets/tickets.wxss */
+.succeed{
+    width: 750rpx;
+    height: 270rpx;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.succeed image{
+    width: 150rpx;
+    height: 150rpx;
+    margin-top: 15rpx;
+}
+.succeed .succeed_title{
+    font-size: 16px;
+    color: #55b737;
+    margin-bottom: 10rpx;
+}
+.succeed .succeed_title1{
+    font-size: 14px;
+    color: #777777;
+}
+.message{
+    width: 750rpx;
+    height: 400rpx;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40rpx 0;
+}
+.message image{
+    width: 300rpx;
+    height: 300rpx;
+}
+.message text{
+    margin-top: 10rpx;
+    color: #3b86e8;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.minute{
+    width: 750rpx;
+    height: 450rpx;
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    padding-left: 100rpx;
+    color: #777777;
+}
+.minute text{
+    height: 80rpx;
+}
+.minute .red{
+    color: red;
+}

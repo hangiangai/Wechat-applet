@@ -1,0 +1,83 @@
+page{
+    background-color: #F5F5F5;
+}
+.number{
+    display: inline-block;
+    font-size: 28rpx;
+    margin-top: 20rpx;
+    margin-left: 32rpx;
+    margin-bottom: 20rpx;
+}
+.property{
+    font-size: 28rpx;
+    background-color: white;
+    height: 220rpx;
+    width: 750rpx;
+}
+.property .region{
+    padding-top: 40rpx;
+    margin-right: 32rpx;
+    margin-left: 32rpx;
+    padding-bottom: 24rpx;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1rpx solid #BBBBBB;
+}
+.property .region .china{
+    color: #868686;
+}
+.property .phonenumber{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 40rpx;
+    margin-left: 32rpx;
+    margin-right: 32rpx;
+    border-bottom: 1rpx solid #BBBBBB;
+}
+.phonenumber input{
+    font-size: 32rpx;
+    width: 200rpx;
+}
+
+
+
+.gain{
+    background-color: white;
+    height: 80rpx;
+    width: 750rpx;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.gain text{
+    display: inline-block;
+    font-size: 28rpx;
+    margin-left: 32rpx;
+    margin-right: 32rpx;
+}
+ .gain button::after{ 
+     border: none; 
+}
+.gain input{
+    display: inline-block;
+    margin-left: 20rpx;
+    font-size: 28rpx;
+}
+.gain button{
+    background-color: white;
+    font-size: 28rpx;
+    color: #0C86EF;
+    padding: 0;
+    margin-left: 100rpx;
+}
+
+.next{
+    background-color: #0C86EF;
+    width: 684rpx;
+    height: 80rpx;
+    font-size: 28rpx;
+    line-height: 80rpx;
+    color: white;
+    margin-top: 60rpx;
+}

@@ -1,0 +1,90 @@
+<view class='wrap'>
+  <!-- 背景图 -->
+  <view class="backgroud">
+    <image src='/images/bg.jpg' mode=''></image>
+  </view>
+
+  <view class='page'>
+    <!-- 时间地点项目内容 -->
+    <view class='title'>
+      <text class='title_date'>{{attractions_infomation.opening_hours}}</text>
+      <text class='title_site'>{{attractions_infomation.name}}</text>
+      <text class='map' bindtap='get_location'>地图</text>
+      <text class='title_content'>项目内容</text>
+      <view class='title_con'>{{attractions_infomation.content}}</view>
+    </view>
+
+    <!-- 立即购买 -->
+    <view class="commodity_screen" bindtap="hideModal" wx:if="{{showModalStatus}}"></view>
+
+    <view wx:if="{{showModalStatus}}" animation='{{animationData}}' class='popup'>
+
+
+
+      <!-- 选择场次 -->
+      <text class='title' style='font-size:30rpx'>场次</text>
+      <radio-group bindchange="date_change_status">
+        <label wx:for='{{date_list}}' wx:key class='box1' style='border:{{item.status?"2rpx solid #0C86EF":""}};color:{{item.status?"#0C86EF":""}}'>
+          <radio value='{{item.index}}' class='date_radio_style'></radio>
+          <text class='date_content'>{{item.date}}</text>
+        </label>
+      </radio-group>
+      <!-- 选择时间 -->
+      <text class='title' style='font-size:30rpx'>时间</text>
+      <radio-group bindchange="time_change_status">
+        <label wx:for='{{time_list}}' wx:key class='box1' style='border:{{item.status?"2rpx solid #0C86EF":""}};color:{{item.status?"#0C86EF":""}}'>
+          <radio value='{{item.index}}' class='time_radio_style'></radio>
+          <text class='time_content'>{{item.time}}</text>
+        </label>
+      </radio-group>
+
+
+
+      <!-- 说明 -->
+      <view class='price'>
+        <text>价格：100元/成人</text>
+        <text class='child'>50/儿童（1.2米-1.4米，1.2米以下不要票）</text>
+      </view>
+
+      <!-- 人数选择 -->
+      <view class='select'>
+        <text style='font-size:30rpx;color:#000'>选择人数</text>
+        <view class='adult'>
+          <text>成人</text>
+          <view class="stepper">
+            <!-- 减号 -->
+            <text class="{{count <= 0 ? 'disabled' : 'normal'}}" bindtap="reduce_adutls_number">-</text>
+            <!-- 数值 -->
+            <input type="number" value="{{adutls_number}}" disabled="disabled" />
+            <!-- 加号 -->
+            <text class="{{count >= 100 ? 'disabled' : 'normal'}}" bindtap="add_adutls_number">+</text>
+          </view>
+        </view>
+
+        <view class='son'>
+          <text>儿童</text>
+          <view class="stepper">
+            <!-- 减号 -->
+            <text class="{{Count <= 0 ? 'disabled' : 'normal'}}" bindtap="reduce_children_number">-</text>
+            <!-- 数值 -->
+            <input type="number" value="{{children_number}}" disabled="disabled" />
+            <!-- 加号 -->
+            <text class="{{Count >= 100 ? 'disabled' : 'normal'}}" bindtap="add_children_number">+</text>
+          </view>
+        </view>
+      </view>
+    </view>
+
+    <!-- 底部悬浮 -->
+    <view class='base'>
+      <text class='total_amount_box'>
+      <text class='total_amount_text'>合计:</text>
+      <text class='total_amount_number'>{{total_amount}}<text style='margin-left:5rpx'>元</text></text>
+      </text>
+      <button class='buy' bindtap='buy_immediately' wx:if='{{!showModalStatus}}'>立即购买</button>
+      <button class='buy' bindtap='buy_confirm' wx:else>确认购买</button>
+    </view>
+
+  </view>
+
+</view>

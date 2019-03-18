@@ -1,0 +1,20 @@
+<!--pages/tickets/tickets.wxml-->
+<view class='succeed'>
+  <image src='/images/chenggong.png'></image>
+  <text class='succeed_title'>购票成功</text>
+  <text class='succeed_title1'>感谢您的购买！已经发送购票信息至您的手机</text>
+</view>
+
+
+<view class='message'>
+  <image src='https://zl0gue6t.qcloud.la/public/qrcode/{{img_url}}'></image>
+  <text>未使用</text>
+</view>
+
+<view class='minute'>
+  <text>订单号：000000000000</text>
+  <text>商品名：武汉科技馆</text>
+  <text>订单总额：¥300</text>
+  <text>有效日期：2018.12.01-2018.12-30</text>
+  <text class='red'>门票类型：电子类票</text>
+</view>

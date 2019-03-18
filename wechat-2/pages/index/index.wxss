@@ -1,0 +1,301 @@
+/**index.wxss**/
+.wrap{
+  overflow-x: hidden;
+  overflow-y: scroll;
+  padding-bottom:100rpx; 
+}
+page {
+  overflow-x:hidden; 
+  overflow-y:scroll;
+}
+
+image {
+  border: 0;
+  margin: 0;
+  padding: 0;
+}
+
+.backgroud image {
+  width: 750rpx;
+  height: 460rpx;
+}
+
+.title {
+  width: 670rpx;
+  display: flex;
+  flex-direction: column;
+  margin: 32rpx auto;
+}
+
+.title .title_date {
+  display: block;
+  height: 40rpx;
+}
+
+.title .title_site {
+  display: inline-block;
+  height: 40rpx;
+  margin-top: 50rpx;
+}
+
+.title .title_content {
+  font-weight: bold;
+  display: block;
+  margin-top: 30rpx;
+}
+
+.title .title_con {
+  margin-top: 30rpx;
+  height: 340rpx;
+  width: 670rpx;
+  background-color: #f5f5f5;
+  font-size: 32rpx;
+  text-indent: 60rpx;
+  padding: 15rpx 15rpx; 
+}
+
+.title .map {
+  display: inline-block;
+  height: 90rpx;
+  width: 90rpx;
+  background-color: #bbb;
+  border: 1rpx solid #d8d8d8;
+  text-align: center;
+  line-height: 90rpx;
+  border-radius: 50%;
+  font-size: 28rpx;
+  vertical-align: middle;
+  margin-left: 370rpx;
+}
+
+.base {
+  display: flex;
+  flex-direction: row;
+  height: 100rpx;
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  background-color: #f5f5f5;
+}
+
+/* 增加的代码 */
+/* --------- start -------- */
+.base .total_amount_box{
+  width: 250rpx;
+  line-height: 100rpx;
+  font-size: 30rpx;
+}
+.base .total_amount_box .total_amount_text,.total_amount_number{
+  height: 100rpx;
+  vertical-align: middle;
+}
+.base .total_amount_box .total_amount_text{
+  margin-left: 45rpx;
+}
+.base .total_amount_box .total_amount_number{
+  font-size: 32rpx;
+  color:#0C86EF; 
+  margin-left: 10rpx;
+}
+/* --------- end -------- */
+
+
+.base .buy {
+  line-height: 100rpx;
+  text-align: center;
+  width: 500rpx;
+  height: 100rpx;
+  border: 0;
+  color: white;
+  background-color: #0c86ef;
+  border-radius: 0;
+}
+
+
+/* 弹出界面 */
+.popup { 
+  overflow-y: scroll;
+  overflow-x: hidden;
+  width: 750rpx;
+  height: 872rpx;
+  position: fixed;
+  bottom: 100rpx;
+  left: 0;
+  background-color: white;
+}
+
+.popup_date, .popup_session {
+  display: inline-block;
+  font-size: 16px;
+  margin-top: 60rpx;
+  margin-left: 40rpx;
+}
+
+.popup_Date {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+.popup_Date button {
+  width: 170rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  background-color: white;
+  margin-top: 36rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 80rpx;
+  padding: 0;
+}
+
+.popup_Session button {
+  width: 170rpx;
+  height: 80rpx;
+  margin-left: 40rpx;
+  margin-right: 40rpx;
+  background-color: white;
+  margin-top: 36rpx;
+  font-size: 14px;
+  text-align: center;
+  line-height: 80rpx;
+  padding: 0;
+}
+
+.popup_Date button:hover {
+  border: 1rpx solid #0c86ef;
+  color: #0c86ef;
+}
+
+.popup_Session button:hover {
+  border: 1rpx solid #0c86ef;
+  color: #0c86ef;
+}
+
+.commodity_screen {
+  width: 100%;
+  height: 238rpx;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #000;
+  opacity: 0;
+  overflow: hidden;
+  z-index: 1000;
+  color: #fff;
+}
+
+
+
+/* 弹出页面css代码 */
+
+.box1 {
+  position: relative;
+  display: inline-block;
+  font-size: 32rpx;
+  width: 200rpx;
+  height: 80rpx;
+  border: 2rpx solid #d5d5d5;
+  border-radius: 8rpx;
+  text-align: center;
+  line-height: 80rpx;
+  color: #8a8a8a;
+  margin-left: 35rpx;
+}
+
+.box1 + .box1 {
+  margin-top: 35rpx;
+}
+
+.date_radio_style, .time_radio_style {
+  position: absolute;
+  opacity: 0;
+}
+
+.title {
+  display: block;
+  margin-left: 35rpx;
+  margin-top: 30rpx;
+  border: 1px solid #fff;
+}
+
+
+/* 选择人数 */
+
+.price {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding-left: 40rpx;
+  margin-top: 60rpx;
+  height: 150rpx;
+  width: 100%;
+  background-color: #eee;
+  font-size: 14px;
+  color: rgb(90, 88, 88);
+}
+
+.price .child {
+  margin-left: 85rpx;
+  display: inline-block;
+}
+
+/* 选择人数 */
+.select {
+  flex-direction: column;
+  justify-content: space-around;
+  display: flex;
+  margin-top: 10rpx;
+  height: 350rpx;
+  width: 750rpx;
+  background-color: white;
+  font-size: 28rpx;
+  color: rgb(90, 88, 88);
+  padding-left: 40rpx;
+}
+
+.adult {
+  display: flex;
+  justify-content: space-between;
+}
+
+.son {
+  display: flex;
+  justify-content: space-between;
+}
+
+.stepper {
+  display: flex;
+  width: 220rpx;
+  height: 60rpx;
+  margin-right: 80rpx;
+}
+
+/*加号和减号*/
+.stepper text {
+  width: 70rpx;
+  height: 60rpx;
+  text-align: center;
+  line-height: 60rpx;
+  background-color: #f5f5f5;
+}
+
+/*数值*/
+.stepper input {
+  width: 80rpx;
+  height: 52rpx;
+  text-align: center;
+  font-size: 28rpx;
+  color: #0c86ef;
+}
+
+/*普通样式*/
+.stepper .normal {
+  color: black;
+}
+
+/*禁用样式*/
+.stepper .disabled {
+  color: #ccc;
+}

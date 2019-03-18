@@ -1,0 +1,43 @@
+<view class='box'>
+  <view class='boxbg'>
+    <text class='site'>{{ticket_info.name}}</text>
+    <text>{{ticket_info.select_date}} {{ticket_info.select_time}}</text>
+    <text>{{site}}</text>
+    <text>成人:{{ticket_info.adutls_number}}张 儿童:{{ticket_info.children_number}}张</text>
+    <!-- 左边半圆 -->
+    <text class='left'></text>
+    <!-- 右边半圆 -->
+    <text class='right'></text>
+  </view>
+</view>
+
+
+<view class='change'>
+  <text>取票方式</text>
+  <button bindtap='change_way' style='border:{{change_way_status?"2rpx solid #0c86ef":""}};color:{{change_way_status?"#0c86ef":""}}'>自助取票</button>
+</view>
+
+<view class='message'>
+  <view class='person'>
+    <text>取票人</text>
+    <input placeholder='真实姓名' bindinput='get_real_name'></input>
+  </view>
+  <view class='phone'>
+    <text>联系方式</text>
+    <input placeholder='请输入手机号' bindinput='get_contact' maxlength='13'></input>
+  </view>
+</view>
+
+<view class='agreement'>
+  <checkbox bindtap='change_booking_agreement'></checkbox>
+  <text>同意</text>
+  <navigator>《订票协议》</navigator>
+</view>
+
+<!-- 底部栏 -->
+<view class='base'>
+  <view class='title'>
+    <text>{{ticket_info.total_amount}}</text>元
+  </view>
+  <button class='buy' bindtap='chooseSezi'>去支付</button>
+</view>
