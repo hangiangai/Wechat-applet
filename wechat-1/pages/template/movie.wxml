@@ -1,0 +1,29 @@
+
+
+<template name="test">
+
+  <view class='content-box' wx:for="{{videoInfo}}" wx:key>
+      <view class='content'>
+        
+        <view class='cover'>
+          <image src='{{item.cover}}'></image>
+        </view>
+        
+        <view class='video-info'>
+          <label class='video-info-title'>{{item.title}}</label>
+          <label class='video-info-director'>导演: {{item.directors}}</label>
+          <label class='video-info-protagonist'>主演: {{item.casts}}</label>
+        </view>
+        
+        <view class='video-details'>
+          <label class='video-details-count'>
+            <label style='text-align: center;'>{{item.collect_count}}看过</label>
+          </label>
+          <navigator class='video-details-btn' url='./detail/detail?id={{item.id}}'>详情</navigator>
+        </view>
+
+      </view>
+  </view>
+  
+
+</template>

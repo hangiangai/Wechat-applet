@@ -1,0 +1,71 @@
+<template name="test">
+  <!--pages/index/detail/detail.wxml-->
+
+<view class='wrapper'>
+  <view class='video-info-detail-box'>
+      <!-- 封面 -->
+      <view class='video-cover'>
+        <image src='{{data.image}}'></image>
+      </view>
+
+      <!-- 电影信息 -->
+      <view class='video-info'>
+        <!-- 简略信息 -->
+        <view class='video-info-1'>
+          <!-- 左边 -->
+          <view class='info-1-left'>
+            <label class='info-1'>{{data.title}}</label>
+            <label class='info-2'>
+              <label class='info-2-1'>一周口碑电影榜</label>
+            </label>
+            <label class='info-3'>{{data.year}} {{data.movie_type}}</label>
+            <label class='info-4'>原名: {{data.original_title}}</label>
+            <label class='info-5'>上映时间: {{data.pubdate}}</label>
+            <label class='info-6'>片长: {{data.durations}}</label>
+          </view>
+          <!-- 右边 -->
+          <view class='info-1-right'>
+            <view class='right'>
+              <label>豆瓣评分</label>
+              <label class='score'>{{data.average}}</label>
+              <label>{{data.numRaters}}人</label>
+            </view>
+          </view>
+        </view>
+        <!-- 电影简介 -->
+        <view class='video-info-intro'>
+          <view class='info-intro'>
+            <view class='title'>简介</view>
+            <view class='content'>{{data.summary}}</view>
+          </view>
+        </view>
+      </view>
+
+
+      <view class='catas-title'>
+        <label>影人</label>
+      </view>
+      <scroll-view scroll-x="true" class='video-catas-info'>
+
+        <view class='catas-list' wx:for="{{data.castsArr}}">
+          <view class='list-info'>
+            <image src='{{item.avatars}}' class='pic'></image>
+            <view class='name'>{{item.name}}</view>
+            <view class='type'>{{item.type}}</view>
+          </view>
+        </view>
+
+        <view class='catas-list more'>
+          <view class='list-info'>
+            <view  class='pic more-pic'>
+              <label>全部</label>
+              <label>56人</label>
+            </view>
+          </view>
+        </view>
+
+      </scroll-view>
+  </view>
+</view>
+
+</template>

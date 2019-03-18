@@ -1,0 +1,5 @@
+
+
+<import src="../../template/test.wxml" />
+
+<template is="test" data="{{data:data}}" />

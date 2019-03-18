@@ -1,0 +1,77 @@
+<!--index.wxml-->
+
+
+<view class='navBarBox test'>
+  <view class='navBar' wx:for="{{navBar}}" data-id='{{index}}' wx:key="none" bindtap='navBarChange'>
+    <view class='content' style='color:{{currentBar==index?"rgba(0,0,0,0.7)":""}}'>{{item}}</view>
+    <view class='underline' style='width:{{currentBar==index?"100%":""}}'></view>
+  </view>
+</view>
+
+
+<!-- 说搜框 -->
+<view class='searchBox'>
+  <view class='test1'>
+    <input class='search'></input>
+  </view>
+</view>
+<!-- 导航栏 -->
+<view class='navBarBox '>
+  <view class='navBar' wx:for="{{navBar}}" data-id='{{index}}' wx:key="none" bindtap='navBarChange'>
+    <view class='content' style='color:{{currentBar==index?"rgba(0,0,0,0.7)":""}}'>{{item}}</view>
+    <view class='underline' style='width:{{currentBar==index?"100%":""}}'></view>
+  </view>
+</view>
+
+<!-- 正在热映 -->
+ <view class='main-content-box' hidden='{{currentBar==0?false:true}}'>
+  <view class='content-box' wx:for="{{videoInfo}}" wx:key>
+      <view class='content'>
+        
+        <view class='cover'>
+          <image src='{{item.cover}}'></image>
+        </view>
+        
+        <view class='video-info'>
+          <label class='video-info-title'>{{item.title}}</label>
+          <label class='video-info-director'>导演: {{item.directors}}</label>
+          <label class='video-info-protagonist'>主演: {{item.casts}}</label>
+        </view>
+        
+        <view class='video-details'>
+          <label class='video-details-count'>
+            <label style='text-align: center;'>{{item.collect_count}}看过</label>
+          </label>
+          <navigator class='video-details-btn' url='./detail/detail?id={{item.id}}'>详情</navigator>
+        </view>
+      </view>
+    </view>
+</view>
+
+
+<!-- 即将上映 -->
+<view class='main-content-box' hidden='{{currentBar==1?false:true}}'>
+  <navigator class='content-box' wx:for="{{viodeComing}}" wx:key="none" url='./detail/detail?id={{item.id}}'>
+      <view class='content'>
+        
+        <view class='cover'>
+          <image src='{{item.cover}}'></image>
+        </view>
+        
+        <view class='video-info'>
+          <label class='video-info-title'>{{item.title}}</label>
+          <label class='video-info-director'>导演: {{item.directors}}</label>
+          <label class='video-info-protagonist'>主演: {{item.casts}}</label>
+        </view>
+        
+        <view class='video-details'>
+          <label class='video-details-count'>
+            <label style='text-align: center;' style='color:#f37f01'>{{item.collect_count}}想看</label>
+          </label>
+          <navigator class='video-details-btn' style='color:#f37f01;border:1px solid #f37f01'>想看</navigator>
+        </view>
+      </view>
+    </navigator>
+</view>
+
+
